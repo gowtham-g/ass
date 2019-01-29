@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse " ng-controller="homeController">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">ShoppingCart</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li ><a href="#!home">Home</a></li>
+			
+			<li><a href="#logout" ng-click="logout()">Logout</a></li>
+
+			<li><a href="#!user" > <span class="badge" >{{arr.length}}</span> User</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container">
+<div class="row">
+	
+	<div class="col-lg-6 col-md-3 col-xs-2 col-sm-2" ng-repeat="i in arr">
+		<div class="panel panel-success">
+			<div calss="panel-heading">{{i.name}}</div>
+
+			<div class="panel-body">
+			<img src={{i.pic}} alt="product image">
+             <i class="badge" ng-init="count=1"> quantity{{count}}</i>
+
+             <p class="badge">{{i.price | currency:'&#8377;' }}</p>
+             <button ng-click="count=count+1">+</button>
+            <button class="btn btn-danger" ng-click="remove(i)" id="i.id">Remove from cart</button>
+  
+			</div>
+		</div>
+
+	</div>
+	<button class="btn btn-lg btn-success">{{total | currency:'&#8377;'}}</button>
+</div>
+
+<div class="alert alert-warning" ng-if="arr.length==0">Your cart is empty</div>
+<button class="btn btn-info" ng-click="buy()">buy</button>
+<div class="alert alert-success" ng-show="msg" >thanks for buying want to purchase click here the link <a href="#!home">home</a></div>
+</div>

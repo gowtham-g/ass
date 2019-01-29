@@ -1,0 +1,25 @@
+<div class="row">
+	
+	<div class="col-lg-6 col-lg-offset-3">
+	<form ng-submit="login()" class="form-group" name="myForm" autocomplete="off">	
+	<label for="uname" class="label">UserName </label>
+		<input type="text" name="" class="form-control" placeholder="Enter your user name" id="uname" ng-model="uname" >
+		<br>
+		<label for="upass" class="label">Password </label>
+		<input type="password" name="myField" class="form-control" placeholder="Enter your password" id="upass" ng-model="upass"  >
+		<br>
+        
+		<button class="btn btn-info " type="submit" aria-hidden="true"> Login </button>
+	</form>
+
+	<div class="alert alert-danger" ng-show="error">{{error}}</div>
+	</div>
+
+	<div ng-messages="myForm.myField.$error" role="alert">
+				<div  ng-message="pattern" class="alert alert-danger">Password must have a character, symbol, caps, and numeric  </div>
+				
+			</div>
+</div>
+
+
+<!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}" -->

@@ -1,0 +1,44 @@
+
+
+<nav class="navbar navbar-inverse " >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">vasanthTechpark</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#!home">Home</a></li>
+      <li><a href="#!register">Register</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#logout" ng-click="logout()">Logout</a></li>
+
+      <li><a href="#!user" > <span class="badge" >{{arr.length}}</span> User</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+<div class="row">
+	<ol class="breadcrumb">
+  <li><a href="#!home" >Mobiles</a></li>
+  <li><a href="#!accessories" >Accessories</a></li>
+  <li ><a href="#!fruits" class="active">Fruits</a></li>
+</ol>
+<div class="col-lg-4 col-md-3 col-xs-12 col-sm-6" ng-repeat="i in products.collections" > 
+	
+<div class="panel panel-info">
+  
+  <div class="panel-heading">{{i.name}} </div>
+  <div class="panel-body">
+    
+    <img src='{{i.pic}}'>
+
+   
+       <input type="checkbox" name=""  ng-click="addToCart(i.id)" ng-checked="isChecked">                     
+    <input type="checkbox" name="" on-change="addTocart(this)">
+    <button class="btn btn-default" ng-click="addToCart($event)">add</button>
+  </div>
+</div>
+</div>
+
+</div>
+</div>

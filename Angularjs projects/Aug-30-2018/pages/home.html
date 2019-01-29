@@ -1,0 +1,22 @@
+<div class="row">
+	
+<div class="col-lg-4 col-md-3 col-xs-12 col-sm-6" ng-repeat="i in collections.ProductCollection" ng-if="$index<10"> 
+	
+<div class="panel panel-primary">
+	
+<div class=" panel-heading "> {{i.Name}} </div>
+<div class=" panel-body" ng-init="isOn=true">
+	<img src="{{i.ProductPicUrl}}">
+  <span class="badge">{{i.Price | currency:'&#8377;'}}</span>
+  <!-- <input type="checkbox" name="checkbox" ng-modal="isOn"> -->
+  <button class="btn btn-success cart" ng-click="cart($index)" id="{{$index}}"
+  > Add to cart {{isOn}}</button>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<video src="1.mp4" controls width="500px " height="300px"></video>

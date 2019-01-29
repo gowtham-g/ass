@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>fabricJs</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body ng-controller="maincontroller">
+<div class="row">
+<div class="col-lg-8">
+	
+<canvas id="c" width="800px" height="800px"></canvas>
+
+
+
+</div>
+<div class="col-lg-4" ng-init="bw=5">
+
+<select class="form-control" id="selector" ng-model="select" ng-change="animateRect()" >
+	<option value="lr" >L-R</option>
+	<option value="rl">R-L</option>
+	<option value="tb">T-B</option>
+	<option value="bt">B-T</option>
+
+</select>
+<input type="range" name="" ng-model="" ng-change="opacity()">
+<input type="range" name="" ng-model="" ng-change="shadow()">
+
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="assets/js/lib/jquery.js"></script>
+<script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/angular.min.js"></script>
+
+<script type="text/javascript" src="assets/js/lib/fabricjs2.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+</html>

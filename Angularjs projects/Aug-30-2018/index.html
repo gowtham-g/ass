@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Shopping cart using AngularJs</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/fontawesome.min.css">
+
+
+</head>
+<body >
+	 <nav class="navbar navbar-inverse " ng-controller="homeController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">vasanthTechpark</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#!home">Home</a></li>
+      <li><a href="#!register">Register</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#logout" ng-click="logout()">Logout</a></li>
+
+      <li><a href="#!user" > <span class="badge" >{{arr.length}}</span> User</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container" ng-view>	
+
+
+
+</div>
+
+
+	<script type="text/javascript" src="assets/js/lib/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/angular-message.js"></script>
+	<script type="text/javascript" src="assets/js/lib/angular-route.js"></script>
+
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+
+</body>
+</html>

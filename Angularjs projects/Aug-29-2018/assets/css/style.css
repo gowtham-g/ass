@@ -1,0 +1,23 @@
+img{
+	width:400px;
+	height:300px;
+}
+
+.list-group-items{
+	height:300px;
+}
+body{
+	color: white;
+	background-color:#03082bc4;
+}
+.label{
+	color:white;
+	font-size:12pt ;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid #3b0a0a94;
+    border-top-left-radius: 3px;
+    background: #60c9ec;
+    border-top-right-radius: 3px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Angular Js</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<body >
+	<div class="container" ng-cloak >
+
+
+		<div ng-controller="mainController">
+
+
+		<br><br>
+<label for="search">Search</label>
+<input type="text" id="search" class="form-control" name="" ng-model="search.Name">
+Items you have selected <span class="badge">  {{cartItems.length}}</span>
+<button class="btn btn-green" ng-click="buynow()">Buy now</button>
+
+
+<div class=" row">
+<h1>product list</h1>
+<div class="col-lg-6 products-list" ng-cloak>
+<div class="list-group  " ng-repeat="i in products.ProductCollection |filter:search"   >
+  
+    <h4 class="list-group-item-heading text-primary">{{i.Name}}</h4>
+    <p class="list-group-item"><img class="thumbnail" src="{{i.ProductPicUrl}}" width="300px" height="200px">
+    <span class="badge">{{i.Price |currency}}</span> 
+    <button class="btn btn-primary" ng-click="cart($index,$event)" id="{{$index}}">Add to cart</button>
+
+    </p>
+   
+</div>
+</div>
+<h1>cart items </h1>
+<div class="col-lg-6 cart-list" ng-cloak>	
+<div class="list-group  " ng-repeat="i in cartItems"  >
+  
+    <h4 class="list-group-item-heading text-primary">{{products.ProductCollection[i.id].Name}}</h4>
+    <p class="list-group-item"><img class="thumbnail" src="{{products.ProductCollection[i.id].ProductPicUrl}}" width="300px" height="200px">
+   <span class="badge">{{products.ProductCollection[i.id].Price |currency}}</span>
+     
+    </p>
+   
+</div>
+</div>
+<span class="list-group btn-success btn">total: {{total |currency}}
+</span>
+</div>
+
+		<br>
+  
+
+<hr><hr><hr>
+
+
+			<input type="text" class="form-control" ng-model="num1"  required >
+			<input type="text" class="form-control" ng-model="num2"  required>
+
+			<div ng-if="num1 && num2" >
+				{{name}}  {{num1}} * {{num2 }}  = {{num1*num2 | currency}}
+
+			</div>
+			<button ng-click="num2=0;num1=0"> Reset	</button>
+		</div>
+
+		<div ng-controller="myController" ng-init="arr=['vasanth','vsjanv','vasanth1',1,2,3,4,5]" >
+
+			hello {{text | uppercase }}
+
+			
+			<input type="text" name="" ng-model="input" >
+			<div ng-if="input.length <= condition" class="alert alert-danger">
+				ng-if	maximum 6 characters 
+			</div>
+			<div ng-show="input.length <= condition" class="alert alert-danger">
+				ng-show	maximum 6 characters 
+			</div>
+			<div ng-hide="input.length <= condition" class="alert alert-danger">
+				ng-hide	maximum 6 characters 
+			</div>
+			<h1>using ng-class</h1>
+			<div  class="alert" ng-class="{'alert-danger':input.length <= condition,'alert-warning':input.length >= condition}" ng-show="input.length >=1">
+				ng-class	maximum 6 characters 
+			</div>
+
+		</div>
+
+
+		<style type="text/css">
+
+		</style>
+
+		<form name="myForm">
+			<label>
+				Enter text:
+				<input type="email" ng-model="field" name="myField" required maxlength="15" />
+				<input type="email" ng-model="field" name="myField" required maxlength="15" />
+
+			</label>
+			<div ng-messages="myForm.myField.$error" role="alert">
+				<div ng-message="required">Please enter a value for this field.</div>
+				<div ng-message="email">This field must be a valid email address.</div>
+				<div  ng-message="maxlength">This field can be at most 15 characters long.</div>
+			</div>
+		</form>
+		<sapn ng-init="count=0" >{{name}}<br>{{count}}</sapn>
+		<button class="btn " ng-click="count=count+1"> + </button>
+
+		<button class="btn " ng-click="count=count-1"> - </button>
+<script type="text/javascript" src="assets/js/lib/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+
+
+	
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/messages.js"></script>
+
+	</div>
+</body>
+</html>

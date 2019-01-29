@@ -1,0 +1,21 @@
+
+
+<div class="row">
+	
+	<div class="col-lg-6 col-md-3 col-xs-2 col-sm-2" ng-repeat="i in arr">
+		<div class="panel panel-success">
+			<div calss="panel-heading">{{collections.ProductCollection[i.id].Name}}</div>
+
+			<div class="panel-body">
+			<img src="{{collections.ProductCollection[i.id].ProductPicUrl}}" alt="product image">
+            
+            <button class="btn btn-danger" ng-click="remove($index)" id="i.id">Remove from cart</button>
+
+			</div>
+		</div>
+
+	</div>
+	<button class="btn btn-lg btn-success">{{total | currency:'&#8377;'}}</button>
+</div>
+
+<div class="alert alert-warning" ng-if="arr.length==0">Your cart is empty</div>

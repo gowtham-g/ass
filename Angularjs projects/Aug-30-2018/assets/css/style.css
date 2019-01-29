@@ -1,0 +1,44 @@
+.items-list{
+height:600px;
+overflow:auto;
+height:400px;
+border:2px solid red;
+}
+.list-group {
+
+}
+.products-list{
+	height:800px;
+	overflow:auto;
+	border:2px solid orange;
+}
+.cart-list{
+	height:600px;
+	overflow:auto;
+	border:2px solid orange;
+
+}
+
+img{
+	width:100px;
+	height:100px;
+}
+
+body{
+	background-color:white ;
+	color:black;
+	font-family: Comic Sans Ms;
+	font-size:14pt;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #5bc0de;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}

@@ -1,0 +1,111 @@
+
+		[{
+				"Student Name": "kannan",
+				"Student Id": "001",
+				"Marks": {
+					"M1": 85,
+					"M2": 75,
+					"M3": 92,
+					"M4": 88,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "Mohan",
+				"Student Id": "002",
+				"Marks": {
+					"M1": 78,
+					"M2": 89,
+					"M3": 88,
+					"M4": 93,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "Ramesh",
+				"Student Id": "003",
+				"Marks": {
+					"M1": 83,
+					"M2": 36,
+					"M3": 44,
+					"M4": 63,
+					"M5": 90
+				}
+			}, {
+				"Student Name": "Suresh",
+				"Student Id": "004",
+				"Marks": {
+					"M1": 51,
+					"M2": 80,
+					"M3": 96,
+					"M4": 20,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "Rahul",
+				"Student Id": "005",
+				"Marks": {
+					"M1": 96,
+					"M2": 56,
+					"M3": 74,
+					"M4": 59,
+					"M5": 75
+				}
+			},
+			{
+				"Student Name": "Selva",
+				"Student Id": "006",
+				"Marks": {
+					"M1": 85,
+					"M2": 75,
+					"M3": 92,
+					"M4": 88,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "Mani",
+				"Student Id": "007",
+				"Marks": {
+					"M1": 78,
+					"M2": 89,
+					"M3": 88,
+					"M4": 93,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "santhosh",
+				"Student Id": "008",
+				"Marks": {
+					"M1": 51,
+					"M2": 80,
+					"M3": 96,
+					"M4": 20,
+					"M5": 92
+				}
+			},
+			{
+				"Student Name": "karthick",
+				"Student Id": "009",
+				"Marks": {
+					"M1": 75,
+					"M2": 51,
+					"M3": 68,
+					"M4": 97,
+					"M5": 81
+				}
+			},
+			{
+				"Student Name": "thirumalai",
+				"Student Id": "010",
+				"Marks": {
+					"M1": 85,
+					"M2": 75,
+					"M3": 92,
+					"M4": 88,
+					"M5": 92
+				}
+			}
+		]

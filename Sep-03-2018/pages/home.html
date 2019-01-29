@@ -1,0 +1,99 @@
+
+
+<nav class="navbar navbar-inverse " ng-controller="homeController">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">ShoppingCart</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li ><a ui-sref="home">Home</a></li>
+			
+			<!-- <li><a href="#login">Login</a></li> -->
+			<li><a ui-sref="logout" ng-click="logout()">Logout</a></li>
+
+			<li><a ui-sref="user" > <span class="badge" >{{arr.length}}</span> User</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container">
+
+	<div class="row" ng-show="!isPreview">
+		<ol class="breadcrumb">
+			<li><a href="" class="active"  ng-click="m('mobiles')">Mobiles</a></li>
+			<li><a href="" ng-click="m('accessories')">Accessories</a></li>
+			<li ><a href="" ng-click="m('fruits')">Fruits</a></li>
+		</ol>
+		<div ng-show = 'mobileDiv' ng-repeat="i in products.mobiles">
+			<div class="{{i.type}} col-lg-4">
+				<div class="panel panel-info "   >
+
+					<div class="panel-heading">{{i.name}} </div>
+					<div class="panel-body">
+						<input type="checkbox" class="check" name="" ng-click="add($event,i)" id='{{i}}' >
+						<img src='{{i.pic}}' ng-click="preview(i)">
+						<span class="badge">{{i.price | currency:'&#8377;'}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show = 'acessDiv' ng-repeat="i in products.accessories">
+			<div class="{{i.type}} col-lg-4">
+				<div class="panel panel-info "   >
+					
+					<div class="panel-heading">{{i.name}} </div>
+					<div class="panel-body">
+						<input type="checkbox" name="" ng-click="add($event,i)" id='{{i}}'>
+						<img src='{{i.pic}}' ng-click="preview(i)">
+						<span class="badge">{{i.price | currency:'&#8377;'}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show = 'FruitDiv' ng-repeat="i in products.fruits">
+			<div class="{{i.type}} col-lg-4">
+				<div class="panel panel-info "   >
+					
+					<div class="panel-heading">{{i.name}} </div>
+					<div class="panel-body">
+						<input type="checkbox" name="" ng-click="add($event,i)" id='{{i}}' >
+						<img src='{{i.pic}}' ng-click="preview(i)">
+						<span class="badge">{{i.price | currency:'&#8377;'}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<a class="btn btn-success" href="#!user" ng-click="viewCart()">View cart</a> 
+	<button class="btn btn-info" ><span class="badge">{{arr.length}}</span></button>
+<!-- preview page  -->
+	<div class="preview-page" ng-show="isPreview">
+		
+<ol class="breadcrumb">
+  <li><a href="#!home" class="active" ng-click="isPreview=false" >back</a></li>
+ 
+  <li ><a href="#">Logout</a></li>
+</ol>
+	<div class="col-lg-8 col-lg-offset-2">
+	<div class="panel panel-success">
+
+	<div class="panel-heading">{{previewName}}</div>
+	<div class="panel-body">
+		<img src="{{previewImg}}" class="preview">
+
+       <button class="btn btn-success">{{previewPrice | currency:'&#8377;'}}</button>
+	</div>
+</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+

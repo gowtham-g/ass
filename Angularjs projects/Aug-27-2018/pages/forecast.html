@@ -1,0 +1,25 @@
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-class="{'active':page=='1'}"><a href="#!forecast/1" >1</a></li>
+    <li ng-class="{'active':page=='2'}"><a href="#!forecast/2">2</a></li>
+    <li ng-class="{'active':page=='3'}"><a href="#!forecast/3">3</a></li>
+    <li ng-class="{'active':page=='4'}"><a href="#!forecast/4">4</a></li>
+    <li ng-class="{'active':page=='5'}"><a href="#!forecast/5">5</a></li>
+    <li>
+      <a href="#!forecast/1" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="panel panel-primary" ng-repeat="i in collections.payload">
+ 
+<image-gallery gallery="i"></image-gallery> 
+
+	
+</div>

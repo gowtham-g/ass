@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	
+
+</head>
+<body>
+
+
+
+<input type="text" name="" id="id">
+<input type="text" name="" id="title"> 
+
+
+<br><br>
+
+
+<button >click me</button>
+
+<div id="div1"></div>
+<script type="text/javascript">
+var div= document.querySelector("#div1");
+var arr=[];
+	var url="page1.json";
+	fetch(url)
+	.then(response => response.json())
+	.then (data => arr.push({data}));
+ 	tmp ="<table border='2'><thead><tr><th>ID</th><th>TITLE</th></tr></thead>"
+    for(c in arr){
+    tmp += "<tr><td>"+arr[0].data[c].id+"</td><td>"+arr[0].data[c].title+"</td></tr>";
+    }
+    tmp += "</table>"
+	div.innerHTML=	tmp;
+</script>
+<!-- <script type="text/javascript" src="js/script.js"></script>
+ --> </body>
+</html>

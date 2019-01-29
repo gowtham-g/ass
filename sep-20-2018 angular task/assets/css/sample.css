@@ -1,0 +1,17 @@
+tr:nth-child(odd){
+background-color:#d6d6d6 ;
+color:blue;
+}
+td,th{
+padding:10px 40px;
+}
+
+td:hover{
+	background-color:orange ;
+color:white;
+}
+td:focus{
+	box-shadow: 2px 3px 4px cyan, -2px -3px 4px cyan;
+	background-color:blue ;
+color:white;
+}
